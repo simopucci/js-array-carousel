@@ -6,11 +6,11 @@ const arrowPrev = document.querySelector('.arrow-prev');
 let slideIndex = 0;
 
 let slideshtml = '';
-for (let i = 0; i <= slides.length; i++) {
+for (let i = 0; i < slides.length; i++) {
     const slide = slides[i];
     let activeClass = i == slideIndex ? 'active' : '';
 
-    slideshtml += `<img src="./img/${slide}.webp" class="slide ${activeClass}" alt="slide ${i}">`;
+    slideshtml += `<img src="./img/${slide}" class="slide ${activeClass}" alt="slide ${i}">`;
 }
 
 slidesContainer.innerHTML = slideshtml;
