@@ -9,14 +9,20 @@
     position: relative;
 }
 
+.slides-container {
+    height: 100%;
+}
+
 .slide {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    display: none;
 }
 
-.slide-translated {
-    transform: translateY(-20%);
+.slide.active {
+    display: block;
 }
 
 .arrow-next, .arrow-prev {
