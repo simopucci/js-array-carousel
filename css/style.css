@@ -1,4 +1,42 @@
 .wrapper {
     height: 100vh;
-    
+}
+
+.carousel-container {
+    height: 250px;
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-translated {
+    transform: translateY(-20%);
+}
+
+.arrow-next, .arrow-prev {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.arrow-next {
+    bottom: 10px;
+}
+
+.arrow-prev {
+    top: 10px;
 }
