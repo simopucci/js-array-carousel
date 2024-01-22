@@ -46,3 +46,33 @@ arrowPrev.addEventListener('click', function () {
     const newSlide = allSlides[slideIndex];
     newSlide.classList.add('active');
 });
+
+function changingSlide() {
+    const allSlides = document.getElementsByClassName('slide');
+
+    const oldSlide = allSlides[slideIndex];
+    oldSlide.classList.remove('active');
+
+    if (slideIndex >= allSlides.length - 1) {
+        slideIndex = 0;
+    } else {
+        slideIndex++;
+    }
+
+    const newSlide = allSlides[slideIndex];
+    newSlide.classList.add('active');
+}
+
+const slideChange = setInterval (function() {
+    changingSlide();
+}, 3000);
+
+slidesContainer.onmouseover = function() {
+    clearInterval(slideChange);
+};
+
+slidesContainer.onmouseout = function() {
+    setInterval (function() {
+        changingSlide();
+    }, 3000);
+}
