@@ -1,5 +1,6 @@
 const slides = ['01.webp', '02.webp', '03.webp', '04.webp', '05.webp'];
 const slidesContainer = document.getElementById('slides-container');
+const carouselContainer = document.getElementById('carousel-cont');
 const arrowNext = document.querySelector('.arrow-next');
 const arrowPrev = document.querySelector('.arrow-prev');
 
@@ -67,12 +68,12 @@ const slideChange = setInterval (function() {
     changingSlide();
 }, 3000);
 
-slidesContainer.onmouseover = function() {
+carouselContainer.addEventListener('mouseover', function() {
     clearInterval(slideChange);
-};
+});
 
-slidesContainer.onmouseout = function() {
+carouselContainer.addEventListener('mouseout', function() {
     setInterval (function() {
         changingSlide();
     }, 3000);
-}
+});
